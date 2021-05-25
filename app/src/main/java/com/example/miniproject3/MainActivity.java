@@ -1,16 +1,13 @@
 package com.example.miniproject3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -18,12 +15,18 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-ArrayList<ItemsContent> arrayList;
+    ArrayList<ItemsContent> arrayList;
     ImageView imgProfile;
     TextView nameTv;
     TextView bioTv;
@@ -48,17 +51,17 @@ ArrayList<ItemsContent> arrayList;
 
     }
 
-    private void init(){
-arrayList = new ArrayList<>();
-arrayList.add(new ItemsContent("اندروید","5 days"));
-arrayList.add(new ItemsContent("اندروید1","5 days"));
-arrayList.add(new ItemsContent("اندروید2","5 days"));
-arrayList.add(new ItemsContent("اندروید3","5 days"));
-arrayList.add(new ItemsContent("اندروید3","5 days"));
+    private void init() {
+        arrayList = new ArrayList<>();
+        arrayList.add(new ItemsContent("اندروید", "5 days"));
+        arrayList.add(new ItemsContent("اندروید1", "5 days"));
+        arrayList.add(new ItemsContent("اندروید2", "5 days"));
+        arrayList.add(new ItemsContent("اندروید3", "5 days"));
+        arrayList.add(new ItemsContent("اندروید3", "5 days"));
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        MyAdaptor myAdaptor=new MyAdaptor(this,arrayList);
+        MyAdaptor myAdaptor = new MyAdaptor(this, arrayList);
         recyclerView.setAdapter(myAdaptor);
 
 
@@ -68,9 +71,13 @@ arrayList.add(new ItemsContent("اندروید3","5 days"));
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-Toast.makeText(MainActivity.this,"rate:"+rating,Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "rate:" + rating, Toast.LENGTH_SHORT).show();
             }
         });
+        LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
+        stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(0).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
+
 
     }
 
@@ -79,7 +86,7 @@ Toast.makeText(MainActivity.this,"rate:"+rating,Toast.LENGTH_SHORT).show();
         imgProfile = findViewById(R.id.profile_image);
         nameTv = findViewById(R.id.tv_name);
         bioTv = findViewById(R.id.tv_bio);
-        recyclerView=findViewById(R.id.recycler_viwe);
+        recyclerView = findViewById(R.id.recycler_viwe);
     }
 
     private void askForPermission(String permission, Integer requestCode) {
