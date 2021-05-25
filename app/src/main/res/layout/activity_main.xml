@@ -19,7 +19,6 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/spade_medium"
-                android:paddingTop="@dimen/spade_medium"
                 android:paddingRight="@dimen/spade_medium"
                 android:paddingBottom="@dimen/spade_xlarge">
 

@@ -4,25 +4,26 @@ public class ItemsContent {
 
     String projectName;
     String remainderTime;
+    int progress;
+
+
+
+    public ItemsContent(String projectName, String remainderTime, int progress) {
+        this.projectName = projectName;
+        this.remainderTime = remainderTime;
+        this.progress = progress;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
 
     public String getProjectName() {
         return projectName;
-    }
-
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
     }
 
     public String getRemainderTime() {
         return remainderTime;
     }
 
-    public void setRemainderTime(String remainderTime) {
-        this.remainderTime = remainderTime;
-    }
-
-    public ItemsContent(String projectName, String remainderTime) {
-        this.projectName = projectName;
-        this.remainderTime = remainderTime;
-    }
 }

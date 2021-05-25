@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,7 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
 
         holder.tvProjectName.setText(arrayList.get(position).getProjectName());
         holder.tvRemainderTime.setText(arrayList.get(position).getRemainderTime());
+        holder.progressBar.setProgress(arrayList.get(position).getProgress());
 
     }
 
@@ -48,14 +50,16 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-       public TextView tvProjectName;
+       TextView tvProjectName;
        TextView tvRemainderTime;
+       ProgressBar progressBar;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             tvProjectName = itemView.findViewById(R.id.rv_project_name);
             tvRemainderTime = itemView.findViewById(R.id.tv_remainder_time);
+            progressBar=itemView.findViewById(R.id.progress_bar);
 
 
         }

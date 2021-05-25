@@ -53,11 +53,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         arrayList = new ArrayList<>();
-        arrayList.add(new ItemsContent("اندروید", "5 days"));
-        arrayList.add(new ItemsContent("اندروید1", "5 days"));
-        arrayList.add(new ItemsContent("اندروید2", "5 days"));
-        arrayList.add(new ItemsContent("اندروید3", "5 days"));
-        arrayList.add(new ItemsContent("اندروید3", "5 days"));
+        arrayList.add(new ItemsContent("اندروید", "5 days",0));
+        arrayList.add(new ItemsContent("اندروید1", "5 days",76));
+        arrayList.add(new ItemsContent("2اندروید", "5 days",20));
+        arrayList.add(new ItemsContent("3اندروید", "5 days",36));
+        arrayList.add(new ItemsContent("4اندروید", "5 days",100));
+        arrayList.add(new ItemsContent("اندروید5", "5 days",10));
+        arrayList.add(new ItemsContent("6اندروید", "5 days",40));
+        arrayList.add(new ItemsContent("7", "5 days",90));
+        arrayList.add(new ItemsContent("8اندروید", "5 days",80));
+        arrayList.add(new ItemsContent("9اندروید", "5 days",100));
+        arrayList.add(new ItemsContent("10اندروید", "5 days",59));
+        arrayList.add(new ItemsContent("اندروید11", "5 days",38));
+        arrayList.add(new ItemsContent("اندروید12", "5 days",95));
+
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
