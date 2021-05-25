@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MiniProject3</string>
+    <string name="first_and_last_name">علی عطار</string>
+    <string name="skill">مهارت</string>
+    <string name="job">شغل</string>
+    <string name="phone_number">تلفن همراه</string>
+    <string name="where_seen">کجا دیده شده</string>
+    <string name="description">توضیحات</string>
+    <string name="register">ثبت</string>
+    <string name="Bio">من پسر خوبیم و کارام بیسته خداوکیلی</string>
+</resources>
