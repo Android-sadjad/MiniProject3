@@ -9,21 +9,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
 
     Context context;
+    ArrayList<ItemsContent> arrayList;
 
-    public MyAdaptor(Context context) {
-
-        this.context=context;
+    public MyAdaptor(Context context, ArrayList<ItemsContent> arrayList) {
+        this.arrayList = arrayList;
+        this.context = context;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LayoutInflater layoutInflater=LayoutInflater.from(context);
-        View View=layoutInflater.inflate(R.layout.rv_item,parent,false);
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        View View = layoutInflater.inflate(R.layout.rv_item, parent, false);
 
         return new ViewHolder(View);
 
@@ -32,24 +35,27 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyAdaptor.ViewHolder holder, int position) {
 
+        holder.tvProjectName.setText(arrayList.get(position).getProjectName());
+        holder.tvRemainderTime.setText(arrayList.get(position).getRemainderTime());
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView tvProjectName;
-        TextView tvRemainderTime;
+       public TextView tvProjectName;
+       TextView tvRemainderTime;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            tvProjectName=itemView.findViewById(R.id.rv_project_name);
-            tvRemainderTime=itemView.findViewById(R.id.tv_remainder_time);
+            tvProjectName = itemView.findViewById(R.id.rv_project_name);
+            tvRemainderTime = itemView.findViewById(R.id.tv_remainder_time);
 
 
         }

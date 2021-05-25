@@ -20,9 +20,10 @@ import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+ArrayList<ItemsContent> arrayList;
     ImageView imgProfile;
     TextView nameTv;
     TextView bioTv;
@@ -48,11 +49,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
+arrayList = new ArrayList<>();
+arrayList.add(new ItemsContent("اندروید","5 days"));
+arrayList.add(new ItemsContent("اندروید1","5 days"));
+arrayList.add(new ItemsContent("اندروید2","5 days"));
+arrayList.add(new ItemsContent("اندروید3","5 days"));
+arrayList.add(new ItemsContent("اندروید3","5 days"));
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        MyAdaptor myAdaptor=new MyAdaptor(this);
-
+        MyAdaptor myAdaptor=new MyAdaptor(this,arrayList);
         recyclerView.setAdapter(myAdaptor);
 
 
