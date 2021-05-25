@@ -68,7 +68,7 @@ arrayList.add(new ItemsContent("اندروید3","5 days"));
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-
+Toast.makeText(MainActivity.this,"rate:"+rating,Toast.LENGTH_SHORT).show();
             }
         });
 
