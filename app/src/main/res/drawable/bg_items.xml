@@ -4,13 +4,13 @@
 
     <stroke
         android:width="@dimen/spade_very_small"
-        android:color="@color/bademjooni"
+        android:color="#C8BE9B"
         >
 
     </stroke>
 
     <solid
-        android:color="#E4DCF3">
+        android:color="@color/white">
 
     </solid>
 

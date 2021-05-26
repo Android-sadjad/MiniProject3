@@ -2,6 +2,8 @@ package com.example.miniproject3;
 
 public class ItemsContent {
 
+
+
     String projectName;
     String remainderTime;
     int progress;
@@ -25,5 +27,8 @@ public class ItemsContent {
     public String getRemainderTime() {
         return remainderTime;
     }
+
+
+
 
 }

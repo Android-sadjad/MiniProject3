@@ -26,10 +26,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
     ArrayList<ItemsContent> arrayList;
     ImageView imgProfile;
     TextView nameTv;
     TextView bioTv;
+    TextView scoreTv;
     RatingBar ratingBar;
     final int REQUEST_CODE_READ_EXTERNAL = 10;
     private static final int SELECT_PHOTO = 100;
@@ -80,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                Toast.makeText(MainActivity.this, "rate:" + rating, Toast.LENGTH_SHORT).show();
+              scoreTv.setText(String.valueOf(rating));
             }
         });
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
-        stars.getDrawable(2).setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP);
-        stars.getDrawable(0).setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(2).setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP);
+        stars.getDrawable(0).setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
 
 
     }
@@ -94,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         imgProfile = findViewById(R.id.profile_image);
         nameTv = findViewById(R.id.tv_name);
+        scoreTv = findViewById(R.id.tv_score);
         bioTv = findViewById(R.id.tv_bio);
         recyclerView = findViewById(R.id.recycler_viwe);
     }

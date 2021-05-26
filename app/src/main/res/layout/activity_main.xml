@@ -10,24 +10,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cl_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#F6ECF3"
             android:layout_margin="@dimen/spade_small"
+            android:backgroundTint="#F6ECF3"
             app:cardCornerRadius="@dimen/spade_medium"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:padding="@dimen/spade_middle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="@dimen/spade_middle"
 
 
                 >
@@ -52,6 +50,19 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spade_large"
+                    android:layout_marginBottom="@dimen/spade_small"
+                    android:text="3.0"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+                    app:layout_constraintLeft_toLeftOf="@id/ratingBar"
+                    app:layout_constraintTop_toTopOf="@id/ratingBar" />
+
+                <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -63,6 +74,7 @@
                     android:textSize="25sp"
                     app:layout_constraintRight_toLeftOf="@id/cv_img"
                     app:layout_constraintTop_toTopOf="@id/cv_img" />
+
 
                 <RatingBar
                     android:id="@+id/ratingBar"
@@ -84,7 +96,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spade_large"
                     android:gravity="center|right"
-                    android:text="@string/Bio"
+                    android:text="مهارت:برنامه نویس اندروید-فوتوشاپ\n
+شغل : کاراموز\n
+مدرک: فوق دکترای نرم افزار
+"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintTop_toBottomOf="@id/cv_img" />
@@ -94,13 +109,12 @@
         </androidx.cardview.widget.CardView>
 
 
-
         <androidx.recyclerview.widget.RecyclerView
 
-            android:layout_marginTop="@dimen/spade_large"
             android:id="@+id/recycler_viwe"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spade_large"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_profile" />

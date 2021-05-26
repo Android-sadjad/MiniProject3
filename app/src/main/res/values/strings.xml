@@ -7,9 +7,11 @@
     <string name="where_seen">کجا دیده شده</string>
     <string name="description">توضیحات</string>
     <string name="register">ثبت</string>
-    <string name="Bio">من پسر خوبیم و کارام بیسته خداوکیلی
-    من پسر خوبیم و کارام بیسته خداوکیلی
-        من پسر خوبیم و کارام بیسته خداوکیلی
+    <string name="Bio">
+      "  مهارت:برنامه نویس اندروید\n
+       \nشغل:کاراموز
+        مدرک:فوق دکترای نرم افزار
+        "
 
     </string>
 </resources>
