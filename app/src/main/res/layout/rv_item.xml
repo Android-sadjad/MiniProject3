@@ -10,7 +10,7 @@
     android:backgroundTint="#e3f2fd"
     app:cardCornerRadius="@dimen/spade_large"
     app:strokeColor="@color/bademjooni"
-    app:cardElevation="@dimen/spade_2xlarge"
+    app:cardElevation="@dimen/spade_small"
     app:strokeWidth="0.7dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout

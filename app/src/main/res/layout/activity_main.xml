@@ -21,7 +21,7 @@
             android:layout_margin="@dimen/spade_medium"
             android:backgroundTint="#D3E7F6"
             app:cardCornerRadius="@dimen/spade_medium"
-            app:cardElevation="@dimen/spade_100dp"
+            app:cardElevation="@dimen/spade_large"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/bademjooni"
             app:strokeWidth="0.5dp">
