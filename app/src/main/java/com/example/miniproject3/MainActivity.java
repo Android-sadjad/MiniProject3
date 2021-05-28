@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void findViews() {
         ratingBar = findViewById(R.id.ratingBar);
-        imgProfile = findViewById(R.id.profile_image);
+        imgProfile = findViewById(R.id.cv_img);
         nameTv = findViewById(R.id.tv_name);
         scoreTv = findViewById(R.id.tv_score);
         bioTv = findViewById(R.id.tv_bio);
