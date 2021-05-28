@@ -7,7 +7,7 @@
     android:layout_marginLeft="@dimen/spade_medium"
     android:layout_marginRight="@dimen/spade_medium"
     android:layout_marginBottom="@dimen/spade_medium"
-    android:backgroundTint="#e3f2fd"
+    android:backgroundTint="#ffffff"
     app:cardCornerRadius="@dimen/spade_large"
     app:strokeColor="@color/bademjooni"
     app:cardElevation="@dimen/spade_small"
