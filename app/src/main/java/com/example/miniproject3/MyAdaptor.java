@@ -39,8 +39,6 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
         holder.tvProjectName.setText(arrayList.get(position).getProjectName());
         holder.tvRemainderTime.setText(arrayList.get(position).getRemainderTime());
         holder.progressBar.setProgress(arrayList.get(position).getProgress());
-        holder.tvPercent.setText(String.valueOf(arrayList.get(position).getProgress() + "%"));
-
 
     }
 
@@ -52,7 +50,6 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        TextView tvPercent;
        TextView tvProjectName;
        TextView tvRemainderTime;
        ProgressBar progressBar;
@@ -63,7 +60,6 @@ public class MyAdaptor extends RecyclerView.Adapter<MyAdaptor.ViewHolder> {
             tvProjectName = itemView.findViewById(R.id.rv_project_name);
             tvRemainderTime = itemView.findViewById(R.id.tv_remainder_time);
             progressBar=itemView.findViewById(R.id.progress_bar);
-            tvPercent=itemView.findViewById(R.id.percent_tv);
 
 
         }
