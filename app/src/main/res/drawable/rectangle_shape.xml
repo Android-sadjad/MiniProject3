@@ -13,7 +13,7 @@
     </solid>
 
     <corners
-        android:radius="@dimen/spade_small"/>
+        android:radius="@dimen/_5sdp"/>
 
 
 

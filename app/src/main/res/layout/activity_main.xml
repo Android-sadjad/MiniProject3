@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,10 +18,10 @@
             android:id="@+id/cl_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/spade_medium"
+            android:layout_margin="@dimen/_10sdp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="@dimen/spade_medium"
-            app:cardElevation="@dimen/spade_large"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_20sdp"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/bademjooni"
             app:strokeWidth="0.5dp">
@@ -28,7 +29,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/spade_middle"
+                android:padding="@dimen/_15sdp"
 
 
                 >
@@ -36,9 +37,9 @@
 
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="@dimen/spade_medium"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_margin="@dimen/_5sdp"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:civ_border_width="0.5dp"
@@ -53,13 +54,12 @@
                     android:id="@+id/tv_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                   android:layout_marginRight="@dimen/spade_small"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:fontFamily="@font/peyda_medium"
                     android:text="3.0"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="30dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_35sdp"
 
                     app:layout_constraintBottom_toBottomOf="@id/ratingBar"
                     app:layout_constraintLeft_toLeftOf="@id/ratingBar"
@@ -69,13 +69,13 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginRight="@dimen/spade_large"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
                     android:fontFamily="@font/peyda_semibold"
                     android:gravity="center"
                     android:text="@string/first_and_last_name"
                     android:textColor="@color/black"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/_18sdp"
                     app:layout_constraintRight_toLeftOf="@id/cv_img"
                     app:layout_constraintTop_toTopOf="@id/cv_img" />
 
@@ -85,20 +85,20 @@
                     android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spade_medium"
                     android:numStars="5"
                     android:rating="3"
-                    android:scaleX="0.5"
-                    android:scaleY="0.5"
-                    android:layout_marginRight="70dp"
+                    android:scaleX="0.4"
+                    android:scaleY="0.4"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:layout_marginRight="@dimen/_43sdp"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_name" />
+                    app:layout_constraintBottom_toBottomOf="@id/cv_img" />
 
                 <TextView
                     android:id="@+id/tv_bio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spade_large"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:fontFamily="@font/peyda_medium"
                     android:gravity="center|right"
                     android:text="مهارت:برنامه نویس اندروید-فوتوشاپ\n
@@ -106,7 +106,7 @@
 مدرک: فوق دکترای نرم افزار
 "
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/_14sdp"
                     app:layout_constraintTop_toBottomOf="@id/cv_img" />
 
 
@@ -118,7 +118,7 @@
             android:id="@+id/recycler_viwe"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/spade_large"
+            android:layout_marginTop="@dimen/_20sdp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_profile" />

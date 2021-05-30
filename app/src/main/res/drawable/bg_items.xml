@@ -15,6 +15,6 @@
     </solid>
 
     <corners
-        android:radius="@dimen/spade_large"/>
+        android:radius="@dimen/_20sdp"/>
 
 </shape>
