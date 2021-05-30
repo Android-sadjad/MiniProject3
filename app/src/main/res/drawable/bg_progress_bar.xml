@@ -7,16 +7,13 @@
     </item>
 
     <item android:id="@android:id/progress"
-        android:top="1dp"
-        android:bottom="1dp"
-        android:left="1dp"
-        android:right="1dp">
+        >
 
         <scale android:scaleWidth="100%">
             <shape>
-                <corners android:radius="8dp"/>
                 <solid android:color="#51A9FB4A"/>
             </shape>
         </scale>
+
     </item>
 </layer-list>
