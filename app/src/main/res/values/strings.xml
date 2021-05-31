@@ -14,4 +14,13 @@
         "
 
     </string>
+
+    <string name="ANODYNE">POWERED BY ANODYNE</string>
+    <string name="partner">P A R T N E R</string>
+    <string name="username_phone">شماره همراه</string>
+    <string name="password">رمز عبور</string>
+    <string name="login">ورود</string>
+    <string name="login_page">صفحه ورود</string>
+
+
 </resources>
